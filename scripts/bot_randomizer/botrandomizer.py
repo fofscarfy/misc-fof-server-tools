@@ -2,9 +2,9 @@ import json
 from random import random, shuffle, randint
 from time import sleep
 
-STATS = ["bot_rotation_speed", "bot_shoot_delay", 
-            "bot_aim_trailing", "bot_strafe", 
-            "bot_aggression"]
+STATS = ["bot_rotation_speed", "bot_aim_trailing", 
+         "bot_shoot_delay", "bot_strafe", 
+         "bot_aggression"]
 
 KEY_ORDER = ["bot_rotation_speed", "bot_shoot_delay",
                 "bot_aim_trailing", "bot_strafe",

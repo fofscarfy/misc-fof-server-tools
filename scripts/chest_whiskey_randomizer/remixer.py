@@ -25,36 +25,34 @@ class FofPropObj:
         return dist(self.origin, other.origin)
 
 class FofRemixer:
-    def __init__(self):
+    def __init__(self, config=None):
+        if config is None: config = {}
         
         ## Config Variables
         # Distance for whiskey to be a neighbor
-        self.whiskey_neighbor_dist = float(os.environ.get("WHISKEY_NEIGHBOR_DIST", 20.0))
+        self.whiskey_neighbor_dist: float = config.get("whiskey_neighbor_dist", 20.0)
         
         # Distance for chest to be a neighbor
-        self.chest_neighbor_dist = float(os.environ.get("CHEST_NEIGHBOR_DIST", 0.0))
-        
-        # Distance for crates to be a cluster (You don't want this)
-        self.crate_neighbor_dist = float(os.environ.get("CRATE_NEIGHBOR_DIST", 0.0))
+        self.chest_neighbor_dist: float = config.get("chest_neighbor_dist", 0.0)
         
         # Probability of including a neighbor
-        self.neighbor_chance = float(os.environ.get("NEIGHBOR_CHANCE", 1.0))
+        self.neighbor_chance: float = config.get("neighbor_chance", 1.0)
         
         # Distance Bias: How much distance weighs into where things are placed 
         # (0 = no weight, 1 = proportional, 10000.0 (or high number) -> almost always picks furthest)
-        self.distance_bias = float(os.environ.get("DISTANCE_BIAS", 1.0))
+        self.distance_bias: float = config.get("distance_bias", 1.0)
         
         # Amount of whiskey to put on the map - (0 < val < 1 = percentage, integer = number)
-        self.num_whiskey = float(os.environ.get("WHISKEY_AMOUNT", 0.333))
+        self.num_whiskey: float | int = config.get("whiskey_amount", 0.333)
         
         # Number of blue crates - (0 < val < 1 = percentage, integer = number)
-        self.blue_crate_amt = float(os.environ.get("BLUE_CRATE_AMOUNT", 3))
+        self.blue_crate_amt: float | int = config.get("blue_crate_amount", 3)
         
         # Number of red crates - (0 < val < 1 = percentage, integer = number)
-        self.red_crate_amt = float(os.environ.get("RED_CRATE_AMOUNT", 2))
+        self.red_crate_amt: float | int = config.get("red_crate_amount", 2)
         
         # Number of gold crates - (0 < val < 1 = percentage, integer = number)
-        self.gold_crate_amt = float(os.environ.get("GOLD_CRATE_AMOUNT", 1))
+        self.gold_crate_amt: float | int = config.get("gold_crate_amount", 1)
 
     def import_ai_script(self, input_script):
         self.item_categories = {}
@@ -194,20 +192,24 @@ class FofRemixer:
             fp.write(out_str)     
             
 if __name__ == "__main__":
-    ENV_FILE = "configs/remixer.env"
+    import yaml
+    CONFIG_FILE = "configs/remixer.yml"
     
-    from dotenv import load_dotenv
-    load_dotenv(ENV_FILE)
-    
+    with open(CONFIG_FILE, "r") as fp:
+        config = yaml.safe_load(fp)
+
+    templates_folder = config.get("templates_folder", "data/map-prop-templates/chest-whiskey-templates")
+    output_folder = config.get("output_folder", "fof/fof_scripts/ai_editor")
+
     parser = ArgumentParser(description="Script for randomizing chest and whiskey placement on maps.")
     parser.add_argument('map_name', type=str, help='The map name of the map whose chests/whiskey to randomize')
     args = parser.parse_args()
-    
-    input_script = f"data/map_prop_templates/chest-whiskey-templates/{args.map_name}-shootout-template.ai"
-    output_script = f"fof/fof_scripts/ai_editor/{args.map_name}-shootout.ai"
+
+    input_script = os.path.join(templates_folder, f"{args.map_name}-shootout-template.ai")
+    output_script = os.path.join(output_folder, f"{args.map_name}-shootout.ai")
     
     if os.path.exists(input_script):
-        remixer = FofRemixer()
+        remixer = FofRemixer(config)
         remixer.import_ai_script(input_script)
         remixer.create_randomized_locations()
         remixer.export_to_script(output_script)

@@ -52,9 +52,9 @@ The `stats` field houses the 5 stats you can change per bot, and are integer val
 | 3 | Strafing | bot_shoot_delay |
 | 4 | Aggression | bot_aggression |
 
-***NOTE**: Look at Quickness and Strafing, they appear to be switched. I did this intentionally - if you generate a bot using the in-game AI editor the output of Quickness maps to bot_strafe and the output of Strafing maps to bot_shoot_delay.*
+***NOTE**: Look at Quickness and Strafing, they appear to be switched. I did this intentionally - if you generate a bot using the in-game AI editor the output of Quickness maps to bot_strafe and the output of Strafing maps to bot_shoot_delay. This is corrected in the code.*
 
-So if you wanted a bot with 8 awareness, 2 aim, 4 quickness, 1 strafing, and 10 aggression, you would use `"stats": [8, 2, 4, 1, 10]`.
+So if you wanted a bot with 8 awareness, 2 aim, 4 quickness, 1 strafing, and 10 aggression, you would use `"stats": [8, 2, 4, 1, 10]`. Keep in mind that the code follows the stat names and not the variable names - the above example illustrates this, and applies the 1 strafing to `bot_strafe` and the 4 quickness to `bot_shoot_delay`.
 
 An in-game "Skill Average" is computed by averaging all stats except aggression.
 

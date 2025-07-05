@@ -1,0 +1,13 @@
+bin
+fof
+hl2
+platform
+steamapps
+srcds*
+start_server.sh
+steam_appid.txt
+__pycache__
+venv
+
+*secrets.env
+data/discord-verification/*

@@ -1,0 +1,15 @@
+# Chance of bots using boss parameters
+bots_boss_chance: 0.05
+
+# Enabling bots on the same team:
+bots_same_team: false
+
+# If bots_same_team is true, they will use this team
+# 2 - Vigilantes, 3 - Desperados, 4 - Bandidos, 5 - Rangers, 6 - Zombies
+bots_same_team_no: 3
+
+# Location of the json specifying your custom bots
+bots_data_file: "data/bot-specs/bot_specs.json"
+
+# Output location (where the randomized bot script should go)
+bots_output_script: "fof/fof_scripts/bots/generated.txt"

@@ -1,0 +1,22 @@
+# Location of template ai scripts that have all possible chest and whiskey locations
+templates_folder: "data/map-prop-templates/chest-whiskey-templates"
+# This should be where your ai_editor folder is, typically under `fof/fof_scripts/ai_editor`
+output_folder: "fof/fof_scripts/ai_editor"
+
+# Chance of a neighbor object also spawning (as long as enough object slots remain)
+neighbor_chance: 1.0
+
+# How much the distance between two locations impacts placement
+# (0: no weight, > 0: favors further spots, < 0: favors closer spots, 1.0/-1.0: directly proportional far/close)
+distance_bias: 1.0
+
+# This is how close whiskey has to be for them to be considered "neighbors"
+whiskey_neighbor_dist: 25.0
+whiskey_amount: 0.333
+
+# Specifying the amount of each crate type to put in
+# Using an integer will result in that amount of crates
+# Using a float (0 < x < 1) will do a proportional amount of all possible chest locations
+blue_crate_amount: 4
+red_crate_amount: 3
+gold_crate_amount: 2

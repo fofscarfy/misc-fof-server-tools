@@ -1,0 +1,128 @@
+{
+    "Scarfy": {
+        "team": -1,
+        "stats": [10, 8, 5, 7, 9],
+        "equipment": [2, -1, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [2, -1, -1, -1]
+        }
+    },
+    "ras": {
+        "team": 5,
+        "stats": [8, 10, 8, 7, 10],
+        "equipment": [13, 1, 20, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [29, 1, 20, -1]
+        }
+    },
+    "Riv": {
+        "team": 3,
+        "stats": [7, 5, 8, 4, 7],
+        "equipment": [13, 3, 15, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [31, 3, 15, -1]
+        }
+    },
+    "Jab": {
+        "team": -1,
+        "stats": [8, 10, 7, 9, 7],
+        "equipment": [5, 34, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [32, 32, 34, 9]
+        }
+    },
+    "Viking": {
+        "team": 5,
+        "stats": [8, 5, 7, 7, 5],
+        "equipment": [30, 34, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [6, 17, 34, -1]
+        }
+    },
+    "Zip": {
+        "team": 3,
+        "stats": [8, 7, 7, 5, 2],
+        "equipment": [13, 34, 20, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [13, 34, 20, -1]
+        }
+    },
+    "ScrimpyOnion": {
+        "team": -1,
+        "stats": [6, 9, 8, 9, 5],
+        "equipment": [34, 20, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [17, 20, -1, -1]
+        }
+    },
+    "Cranium Brain": {
+        "team": -1,
+        "stats": [5, 2, 3, 5, 2],
+        "equipment": [0, -1, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [34, -1, -1, -1]
+        }
+    },
+    "Southern Star": {
+        "team": 5,
+        "stats": [9, 6, 7, 8, 1],
+        "equipment": [5, 34, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [18, 34, -1, -1]
+        }
+    },
+    "Pebble": {
+        "team": 2,
+        "stats": [9, 6, 7, 8, 6],
+        "equipment": [28, 3, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [18, 34, -1, -1]
+        }
+    },
+    "Biscuvy": {
+        "team": 5,
+        "stats": [9, 6, 7, 8, 8],
+        "equipment": [2, 34, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [21, 34, -1, -1]
+        }
+    },
+    "Gypsy": {
+        "team": 3,
+        "stats": [9, 6, 7, 8, 10],
+        "equipment": [5, 34, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [18, 34, -1, -1]
+        }
+    },
+    "tttg": {
+        "team": -1,
+        "stats": [9, 6, 7, 8, 10],
+        "equipment": [28, 1, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [32, 28, -1, -1]
+        }
+    },
+    "Level Garlic - Whiskey Man": {
+        "team": 4,
+        "stats": [9, 6, 7, 8, 10],
+        "equipment": [2, 20, -1, -1],
+        "boss": {
+            "stats": [10, 10, 10, 10, 10],
+            "equipment": [32, 20, 2, -1]
+        }
+    }
+}

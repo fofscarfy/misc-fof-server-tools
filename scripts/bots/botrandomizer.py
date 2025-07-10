@@ -18,9 +18,9 @@ def shuffle_bots(data_file, output_file, boss_chance=0.05, same_team=False, same
     namelist = list(data.keys())
     shuffle(namelist)
 
-    full_str = '"BotList"\n{'
+    full_str = '"BotList"\n{\n'
     for name in namelist:
-        full_str += '\tpreset\n\t{\n\t'
+        full_str += '\t"preset"\n\t{\n\t'
         boss = random() < boss_chance
 
         stat_idx = 0

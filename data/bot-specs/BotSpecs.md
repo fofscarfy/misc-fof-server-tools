@@ -29,13 +29,13 @@ Here's what everything means:
 The *key* for each entry becomes the name, so the entry for `"Scarfy"` will become `BOT Scarfy` in game.
 
 ### Teams
-The *team* corresponds to a different team. Here's the teams by ID number:
+The *team* index corresponds to a different team (naturally). Here's the teams by ID number:
 
 | Number | Faction |
 | ------ | ------- |
 | -1 | auto-assigned |
-| 0 | ??? |
-| 1 | ??? |
+| 0 | Console? |
+| 1 | Spectator? |
 | 2 | Vigilantes |
 | 3 | Desperados |
 | 4 | Bandidos |

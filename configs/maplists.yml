@@ -1,0 +1,5 @@
+# Location of the maplist file used for nomination
+nominate_maplist_file: "fof/maplists/team_shootout_nominate_list.txt"
+
+# Location of the standard map rotation maplist
+rotation_maplist_file: "fof/mapcycle.txt"

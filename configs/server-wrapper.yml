@@ -1,0 +1,17 @@
+# This is for local server communication between server script and client plugins
+fof_local_host: 127.0.0.1
+fof_local_port: 9000
+
+# This is the port for connecting to your game server
+server_port: 27015
+
+# This is for making RCON calls to the server
+fof_rcon_address: 127.0.1.1
+fof_rcon_port: 27015
+
+# This map will load on boot
+starting_map: fof_fistful
+
+# This controls the maximum number of allowed players
+# Note that different maps or modes may not support this many players
+max_players: 20

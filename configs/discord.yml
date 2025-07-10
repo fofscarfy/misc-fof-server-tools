@@ -1,0 +1,4 @@
+# File location storing discord IDs and generated key for verification
+verify_pending_file: "data/secret/discord-verification/pending_verifications.json"
+# File location storing steamID and discord ID pairs
+verified_user_file: "data/secret/discord-verification/verified_users.json"

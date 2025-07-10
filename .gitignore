@@ -8,6 +8,10 @@ start_server.sh
 steam_appid.txt
 __pycache__
 venv
+debug.log
 
 *secrets.env
-data/discord-verification/*
+data/secret/*
+scripts/unused
+
+!fof/maplists/team_shootout*

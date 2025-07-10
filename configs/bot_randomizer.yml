@@ -2,7 +2,7 @@
 bots_boss_chance: 0.05
 
 # Enabling bots on the same team:
-bots_same_team: false
+bots_same_team: true
 
 # If bots_same_team is true, they will use this team
 # 2 - Vigilantes, 3 - Desperados, 4 - Bandidos, 5 - Rangers, 6 - Zombies

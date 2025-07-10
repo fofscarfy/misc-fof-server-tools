@@ -1,5 +1,4 @@
 bin
-fof
 hl2
 platform
 steamapps
@@ -14,4 +13,7 @@ debug.log
 data/secret/*
 scripts/unused
 
+fof/*
+!fof/maplists/
+fof/maplists/*
 !fof/maplists/team_shootout*

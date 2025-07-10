@@ -17,6 +17,7 @@ class FofClient:
         self.writer = None
         self.event_handlers = {}
         self.listen_task = None
+        self.received_data = {}
         self._on_connect = []
         self._on_disconnect = []
         self._connected = asyncio.Event()
@@ -116,7 +117,13 @@ class FofClient:
                     continue
 
                 if message["type"] == "get-response":
-                    print("[FofClient] Get-response (not handled automatically):", message)
+                    keys = message["keys"]
+                    dict_ = self.received_data
+                    for key in keys[:-1]:
+                        if key not in dict_:
+                            dict_[key] = {}
+                        dict_ = dict_[key]
+                    dict_[keys[-1]] = message["payload"]
                 elif message["type"] == "event":
                     triggered = message.get("triggered", [])
 
